@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.luv2code</groupId>
-	<artifactId>spring-security-demo</artifactId>
+	<artifactId>spring-security-app</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
 
-	<name>spring-security-demo</name>
+	<name>spring-security-app</name>
 
 	<properties>
 		<springframework.version>5.0.2.RELEASE</springframework.version>
@@ -77,7 +77,7 @@
 
 	<!-- TO DO: Add support for Maven WAR Plugin -->
 	<build>
-		<finalName>spring-security-demo</finalName>
+		<finalName>spring-security-app</finalName>
 		
 		<pluginManagement>
 			<plugins>
