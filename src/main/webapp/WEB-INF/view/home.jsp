@@ -14,6 +14,11 @@
 	Welcome to the luv2code company home page!
 	</p>
 	<hr>
+		<!-- Add a link for leader and managers -->
+		<p>
+			<a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a>
+		</p>
+	<hr>
 		<p>
 			User <security:authentication property="principal.username"/>
 			<br><br>			

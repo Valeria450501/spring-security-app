@@ -26,13 +26,18 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-			.anyRequest().authenticated() //any req must be authenticated 
+	            .antMatchers("/").permitAll()  // allow public access to home page
+	            .antMatchers("/employees").hasRole("EMPLOYEE")
+	            .antMatchers("/leaders/**").hasRole("MANAGER")
+	            .antMatchers("/systems/**").hasRole("ADMIN")
 			.and()
 			.formLogin().loginPage("/showMyLoginPage") // custom page
 				.loginProcessingUrl("/authenticateTheUser")
 				.permitAll() // allow all to see this page
 			.and()
-			.logout().permitAll();
+			.logout()
+			.logoutSuccessUrl("/")  // after logout then redirect to landing page (root)
+			.permitAll();
 	}
 
 	

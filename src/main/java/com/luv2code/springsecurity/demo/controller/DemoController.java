@@ -7,8 +7,22 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class DemoController {
 
 	@GetMapping("/")
-	public String showHome() {
-		return "home";
+	public String showLanding() {		
+		return "plain-login";
 	}
 	
+	@GetMapping("/employees")
+	public String showHome() {		
+		return "home";
+	}
+
+	@GetMapping("/leaders")
+	public String showLeaders() {		
+		return "leaders";
+	}
+		
+	@GetMapping("/systems")
+	public String showSystems() {		
+		return "systems";
+	}
 }
