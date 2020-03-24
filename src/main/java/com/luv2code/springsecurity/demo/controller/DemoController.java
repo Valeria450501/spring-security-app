@@ -8,7 +8,7 @@ public class DemoController {
 
 	@GetMapping("/")
 	public String showLanding() {		
-		return "plain-login";
+		return "landing";
 	}
 	
 	@GetMapping("/employees")

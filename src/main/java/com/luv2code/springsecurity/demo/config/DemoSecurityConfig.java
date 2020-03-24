@@ -33,6 +33,7 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 			.and()
 			.formLogin().loginPage("/showMyLoginPage") // custom page
 				.loginProcessingUrl("/authenticateTheUser")
+				.defaultSuccessUrl("/employees")
 				.permitAll() // allow all to see this page
 			.and()
 			.logout()
