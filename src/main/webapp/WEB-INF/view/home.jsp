@@ -14,15 +14,18 @@
 	Welcome to the luv2code company home page!
 	</p>
 	<hr>
-		<!-- Add a link for leader and managers -->
-		<p>
-			<a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a>
-		</p>
+		<security:authorize access="hasRole('MANAGER')">
+			<!-- Add a link for leader and managers -->
+			<p>
+				<a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a>
+			</p>
+		</security:authorize>
 		
+		<security:authorize access="hasRole('ADMIN')">
 		<p>
 			<a href="${pageContext.request.contextPath}/systems">Admin page</a>
 		</p>
-		
+		</security:authorize>
 	<hr>
 		<p>
 			User <security:authentication property="principal.username"/>
