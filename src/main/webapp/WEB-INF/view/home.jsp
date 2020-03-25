@@ -18,6 +18,11 @@
 		<p>
 			<a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a>
 		</p>
+		
+		<p>
+			<a href="${pageContext.request.contextPath}/systems">Admin page</a>
+		</p>
+		
 	<hr>
 		<p>
 			User <security:authentication property="principal.username"/>
@@ -28,5 +33,6 @@
 	<form:form action="${pageContext.request.contextPath}/logout" method="POST">
 		<input type="submit" value="Logout" />
 	</form:form>
+	
 </body>
 </html>
