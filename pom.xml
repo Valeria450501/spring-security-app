@@ -9,8 +9,6 @@
 
 	<name>spring-security-app</name>
 
-	
-
 	<properties>
 		<springframework.version>5.0.2.RELEASE</springframework.version>
 
